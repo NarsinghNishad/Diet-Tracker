@@ -61,21 +61,21 @@ export const Signup = () => {
    }
 
   return (
-    <div className='col-md-3 mx-auto  img'  >
-      <div className='card '>
+    <div   className='justify-content-center align-items-center d-flex float-left vh-100 img  '  >
+      <div style={{marginLeft:'500px'}} className='card  sign'>
         <div className='card-body'>
           <h1 className='text-center'>SignUp Here</h1> <hr />
           <form onSubmit={SignupForm.handleSubmit}>
 
-            <input type="text " id='name' onChange={SignupForm.handleChange} value={SignupForm.values.name}  className='form-control'/><br />
+            <input type="text " id='name' onChange={SignupForm.handleChange} value={SignupForm.values.name}  className='form-control' placeholder='Name'/><br />
 
-            <input type="text" id='email' onChange={SignupForm.handleChange} value={SignupForm.values.email} className='form-control'/><br />
-            <input type="password" id='password' onChange={SignupForm.handleChange} value={SignupForm.values.password} className='form-control'/><br />
-            <input type="text" id='confirm' onChange={SignupForm.handleChange} value={SignupForm.values.confirm} className='form-control'/><br />
+            <input type="text" id='email' onChange={SignupForm.handleChange} value={SignupForm.values.email} className='form-control' placeholder='Email'/><br />
+            <input type="password" id='password' onChange={SignupForm.handleChange} value={SignupForm.values.password} className='form-control' placeholder='Password'/><br />
+            <input type="text" id='confirm' onChange={SignupForm.handleChange} value={SignupForm.values.confirm} className='form-control' placeholder='Confirm'/><br />
 
             <label htmlFor="">upload image</label>
              <input onChange={uploadfile} type="file" className='form-control mb-3' />
-           <button className='form-control '>submit</button>
+           <button className='form-control btn btn-primary '>submit</button>
           </form>
         </div>
       </div>

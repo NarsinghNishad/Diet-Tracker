@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const UpdateDiet = () => {
     
-
+  
     const { id } = useParams();
     const [foodData, setFoodData] = useState(null)
   
@@ -40,10 +40,10 @@ const UpdateDiet = () => {
       }
     };
   return (
-    <div className='col-md-3 mx-auto'>
-        <div className='card  '>
+    <div className='justify-content-center align-items-center d-flex float-left vh-100 img6'>
+        <div style={{ marginLeft:'600px', height:'400px'}} className='card  sign w-25'>
           <div className='card-body '>
-          <h1 className="text-center my-5"> Update Diet</h1> 
+          <h1 className="text-center "> Update Diet</h1><br /> 
              
           {foodData !== null ? (
               <Formik
@@ -53,13 +53,13 @@ const UpdateDiet = () => {
                 {(addfooditemForm) => (
 
                   <form onSubmit={addfooditemForm.handleSubmit}>
-                    
-                    <input id='name' onChange={addfooditemForm.handleChange} value={addfooditemForm.values.name} type="text" placeholder='  name' className='form-control' /><br />
+                    <label htmlFor="">Name</label>
+                    <input id='name' onChange={addfooditemForm.handleChange} value={addfooditemForm.values.name} type="text" placeholder='  name' className='form-control' /><br /><br />
 
-                    
-                    <input id='fooditems' onChange={addfooditemForm.handleChange} value={addfooditemForm.values.email} type="text" placeholder=' fooditems'  className='form-control' /><br />
+                    <label htmlFor="">FoodItem</label>
+                    <input id='fooditems' onChange={addfooditemForm.handleChange} value={addfooditemForm.values.email} type="text" placeholder=' fooditems'  className='form-control' /><br /><br />
                    
-                    <button type='submit' className='form-control'>UpdateDiet here</button>
+                    <button type='submit' className='form-control btn btn-primary'>UpdateDiet here</button>
 
                   </form>
 

@@ -37,6 +37,41 @@
   }
 }
 .img{
-  background-image: url();
+  background-image: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bnV0cml0aW9ufGVufDB8fDB8fHww&w=1000&q=80');
+background-size: cover;
+background-repeat: no-repeat;
+}
+.sign{
+  background-color: rgba(221, 216, 216, 0.225);
+}
+.img2{
+  background-image: url('https://previews.123rf.com/images/happylark/happylark1709/happylark170900913/86441686-food-rich-of-fiber-healthy-food-background-diet-or-healthy-lifestyle-concept-selective-focus.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+}
+.sign{
+  background-color: rgba(221, 216, 216, 0.225);
+}
+.img3{
+  background-image: url('https://thumbs.dreamstime.com/b/assortment-tropical-fruits-leaves-palm-trees-exot-assortment-tropical-fruits-leaves-palm-trees-120790892.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sign{
+  background-color: rgba(221, 216, 216, 0.092);
+}
+.img4{
+  background-image: url('https://previews.123rf.com/images/peangdao/peangdao1411/peangdao141100064/33644418-healthy-food-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img5{
+  background-image: url('https://images.unsplash.com/photo-1543353071-873f17a7a088?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fHww&w=1000&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img6{
+  background-image: url('https://www.zumodekiwi.com.es/wp-content/uploads/2020/01/How-Many-Calories-Does-Kiwi-Have.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

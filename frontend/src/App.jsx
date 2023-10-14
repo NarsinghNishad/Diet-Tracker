@@ -12,7 +12,8 @@ import ManageDiet from './Component/ManageDiet';
 import UpdateDiet from './Component/UpdateDiet';
 import { AppProvider } from './AppContext';
 import UserAuth from './UserAuth';
-
+import ManageFood from './Component/ManageFood';
+import './App.css';
 
 
 
@@ -29,12 +30,13 @@ const App = () => {
             <Route element={<Signup />} path='Signup' />
             <Route element={<Login />} path='/' />
             <Route element={<Login />} path='/login' />
-            <Route element={<Addfooditem />} path='addfooditem' />
+            <Route element={<UserAuth><Addfooditem /> </UserAuth>} path='addfooditem' />
             <Route element={<UserAuth> <AddDiet /> </UserAuth>} path='AddDiet' />
             <Route element={<ManageUser />} path='ManageUser' />
             <Route element={<UpdateUser />} path='UpdateUser' />
             <Route element={<ManageDiet />} path='ManageDiet' />
-            <Route element={<UpdateDiet />} path='UpdateDiet' />
+            {/* <Route element={<UpdateDiet />} path='UpdateDiet' /> */}
+            <Route element={<ManageFood />} path='ManageFood' />
 
 
 

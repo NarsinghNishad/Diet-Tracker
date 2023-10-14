@@ -43,16 +43,16 @@ const Addfooditem = () => {
   });
 
   return (
-    <div className='col-md-3 mx-auto'>
-      <div className='card '>
+    <div className='justify-content-center align-items-center d-flex float-left vh-100 img3'>
+      <div style={{marginRight:'500px', marginTop:''}} className='card  sign'>
         <div className='card-body'>
-          <h1 className='text-center'>Addfooditem Here</h1> <hr />
+          <h1 style={{color:'yellow'}} className='text-center'>Addfooditem Here</h1> <hr />
           <form action="" onSubmit={AddfooditemForm.handleSubmit}>
             <input type="text " id='name' onChange={AddfooditemForm.handleChange} value={AddfooditemForm.values.name} placeholder='FoodName' className='form-control' /><br />
             <input type="text" id='description' onChange={AddfooditemForm.handleChange} value={AddfooditemForm.values.description} placeholder='description' className='form-control' /><br />
             <input type="number" id='calories' onChange={AddfooditemForm.handleChange} value={AddfooditemForm.values.calories} placeholder='calories' className='form-control' /><br />
 
-            <button className='forn-control'>Addfooditem</button>
+            <button className='form-control btn btn-primary'>Addfooditem</button>
           </form>
         </div>
       </div>

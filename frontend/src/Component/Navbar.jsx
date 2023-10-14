@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
-    
+  <NavLink className="navbar-brand" to="/home">Diet Tracker</NavLink>
     <button
       className="navbar-toggler"
       type="button"
@@ -30,23 +30,8 @@ const Navbar = () => {
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
         
-        <li className="nav-item">
-          <NavLink className="nav-link" to="home">
-            Home
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="Signup">
-            Signup
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="Login">
-            Login
-          </NavLink>
-        </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="Addfooditem">
             Addfooditem
@@ -68,11 +53,8 @@ const Navbar = () => {
             ManageDiet
           </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="UpdateDiet">
-            UpdateDiet
-          </NavLink>
-        </li>
+        
+        
         
         {showoption()}
         

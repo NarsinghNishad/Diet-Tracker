@@ -1,8 +1,11 @@
 import { useFormik } from 'formik';
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const AddDiet = () => {
+
+  const navigate = useNavigate()
 
   const [foodList, setFoodList] = useState([]);
 
@@ -24,6 +27,12 @@ const AddDiet = () => {
 
   const selectFood = (food) => {
     setSelFood([...selFood, food]);
+  }
+
+  const removeItem = (index) => {
+    const temp = selFood;
+    temp.splice(index, 1);
+    setSelFood([...temp]);
   }
 
   const AddDietForm = useFormik({
@@ -52,6 +61,7 @@ const AddDiet = () => {
           title: 'AddDiet successfully'
 
         })
+        navigate('/ManageDiet')
       }
       else {
         Swal.fire({
@@ -66,9 +76,9 @@ const AddDiet = () => {
 
   });
   return (
-    <div className='body bg-success-subtle w-100 h-100'>
-      <div className='col-md-3 mx-auto'>
-        <div className='card '>
+    
+      <div className='justify-content-center align-items-center d-flex float-left vh-100 img4'>
+        <div style={{marginTop:'200px'}} className='card sign'>
           <div className='card-body'>
             <h1 className='text-center'>AddDiet</h1>
             <form onSubmit={AddDietForm.handleSubmit}>
@@ -85,21 +95,21 @@ const AddDiet = () => {
               <p>Selected Foods</p>
               <ul className='list-group'>
                 {
-                  selFood.map((food) => (
+                  selFood.map((food, index) => (
                     <li className='list-group-item d-flex justify-content-between'>
                       <p>{food.name}</p>
-                      <button className='btn btn-danger'>Remove</button>
+                      <button className='btn btn-danger' type='button' onClick={() => removeItem(index)}>Remove</button>
                     </li>
                   ))
                 }
               </ul>
 
-              <button className='btn btn-primary'>AddDiet Here</button>
+              <button className='form-control btn btn-primary mt-4'>AddDiet Here</button>
             </form>
           </div>
         </div>
       </div>
-    </div>
+  
   )
 }
 

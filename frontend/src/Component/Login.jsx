@@ -2,10 +2,12 @@ import { useFormik } from 'formik';
 import React from 'react'
 import Swal from 'sweetalert2';
 import useAppContext from '../AppContext';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Login = () => {
+  const navigate=useNavigate()
 
   const { setloggedin } = useAppContext();
   //initilize formik
@@ -38,7 +40,7 @@ const Login = () => {
         const data = await res.json();
 
         sessionStorage.setItem('user', JSON.stringify(data));
-
+navigate('/Addfooditem');
       }
       else if (res.status === 400) {
         Swal.fire({
@@ -51,8 +53,8 @@ const Login = () => {
 
   });
   return (
-    <div className='col-md-3 mx-auto'>
-      <div className='card '>
+    <div className='justify-content-center align-items-center d-flex float-left vh-100 img2'>
+      <div style={{marginLeft:'500px'}} className='card sign'>
         <div className='card-body'>
           <h1 className='text-center'>Login Here</h1>
           <hr />
